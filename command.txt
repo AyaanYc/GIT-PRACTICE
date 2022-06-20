@@ -1,0 +1,30 @@
+vi입력모드
+작업	Vi 명령어	상세
+입력 시작	i	명령어 입력 모드에서 텍스트 입력 모드로 전환
+입력 종료	ESC	텍스트 입력 모드에서 명령어 입력 모드로 전환
+저장 없이 종료	:q	
+저장 없이 강제 종료	:q!	입력한 것이 있을 때 사용
+저장하고 종료	:wq	입력한 것이 있을 때 사용
+위로 스크롤	k	git log등에서 내역이 길 때 사용
+아래로 스크롤	j	git log등에서 내역이 길 때 사용
+
+
+reset 사용해서 과거로 돌아가기
+    git log
+    되돌아갈 시점: Add team Cheetas의 커밋 해시 복사
+    git reset --hard (돌아갈 커밋 해시)
+
+revert
+    git revert (되돌릴 커밋 해시)
+
+커밋해버리지 않고 revert하기
+    git revert --no-commit (되돌릴  커밋 해시)
+    원하는 다른 작업을 추가한 다음 함께 커밋
+    취소하려면 git reset --hard
+
+revert로 커밋 되돌리는데 커밋사이에 겹치는 파일 수정이 있으면 오류가 터진다
+그럴땐 오류내용을 찾아서 
+    git rm leopards.yaml로 Git에서 해당 파일 삭제
+    git revert --continue로 마무리
+    :wq로 커밋 메시지 저장 
+이런식으로해결
