@@ -28,3 +28,25 @@ revert로 커밋 되돌리는데 커밋사이에 겹치는 파일 수정이 있�
     git revert --continue로 마무리
     :wq로 커밋 메시지 저장 
 이런식으로해결
+
+add-coach란 이름의 브랜치 생성
+git branch add-coach
+
+브랜치 목록 확인
+git branch
+
+add-coach 브랜치로 이동
+git switch add-coach
+
+브랜치 생성과 동시에 이동하기
+git switch -c new-teams
+
+브랜치 삭제하기
+git branch -d (삭제할 브랜치명) 
+    -D는 강제삭제(다른브랜치에 commit이 적용이 안되있을경우)
+    지워질 브랜치에만 있는 내용의 커밋이 있을 경우
+    즉 다른 브랜치로 가져오지 않은 내용이 있는 브랜치를 지울 때
+
+ 브랜치 이름 바꾸기
+ git branch -m (기존 브랜치명) (새 브랜치명)
+
