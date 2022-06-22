@@ -50,3 +50,6 @@ git branch -d (삭제할 브랜치명)
  브랜치 이름 바꾸기
  git branch -m (기존 브랜치명) (새 브랜치명)
 
+
+여러 브랜치의 내역 편리하게 보기
+git log --all --decorate --oneline --graph
